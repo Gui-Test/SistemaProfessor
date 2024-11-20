@@ -32,6 +32,7 @@ session_start();
                 session_unset();
                 session_destroy();
                 ?>
+                window.location.href = "login.php"
             })
         })
 
