@@ -1,4 +1,6 @@
-<?php include("../BancoDados/conexao.php") ?>
+<?php include("../BancoDados/conexao.php");
+session_start()
+?>
 
 <!DOCTYPE html>
 <html>
@@ -12,8 +14,8 @@
 <body>
 
     <nav>
-        <p> Olá <?php /*echo $_SESSION["userdata"]["nome_professor"];*/ ?> </p>
-        <a href="sair.php">
+        <p> Olá <?php echo $_SESSION["userdata"]["nome_professor"]; ?> </p>
+        <a href="certeza_sair.php">
             <input type="button" value="SAIR" name="SAIR">
         </a>
     </nav>

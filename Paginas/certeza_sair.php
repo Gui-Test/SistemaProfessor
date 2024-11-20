@@ -16,25 +16,18 @@ session_start();
     <div>
         <p>Tem Certeza que deseja sair da conta?</p>
 
-        <a href="login.php">
+        <a href="professor.php">
             <button>Cancelar</button>
         </a>
 
+        <a href="../Processos/sair.php">
         <button id="logout">Sair da Conta</button>
-
+        </a>
     </div>
 
     <script>
 
-        $(document).ready(() => {
-            $("button#logout").click((event) => {
-                <?php
-                session_unset();
-                session_destroy();
-                ?>
-                window.location.href = "login.php"
-            })
-        })
+       
 
     </script>
 

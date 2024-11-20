@@ -2,7 +2,7 @@
 
 include("../BancoDados/conexao.php");
 
-$professor = 1  /*$_SESSION["id_professor"]*/ ;
+$professor = $_SESSION["userdata"]["id_professor"];
 $sql_consulta = $conn->prepare("SELECT * FROM Turma WHERE fk_professor = ?");
 $sql_consulta->bind_param("i", $professor);
 
