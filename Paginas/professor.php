@@ -1,4 +1,4 @@
-<?php include("conexao.php") ?>
+<?php include("../BancoDados/conexao.php") ?>
 
 <!DOCTYPE html>
 <html>
@@ -12,8 +12,8 @@
 <body>
 
     <nav>
-        <p> <?php /*echo $_SESSION["nome_professor"];*/ ?> </p>
-        <a href="sar.php">
+        <p> Olá <?php /*echo $_SESSION["userdata"]["nome_professor"];*/ ?> </p>
+        <a href="sair.php">
             <input type="button" value="SAIR" name="SAIR">
         </a>
     </nav>
@@ -38,14 +38,14 @@
 
             <?php
 
-            include("listar_turmas.php");
+            include("../Processos/listar_turmas.php");
 
             if (!empty($lista_turmas)) {
                 foreach ($lista_turmas as $linhas) {
                     echo "<tr>
                                 <td>" . $linhas["id_turma"] . "</td>
-                                <td>". $linhas["nome_turma"] . "</td>
-                                <td><a href='excluir_turma.php'>Excluir</a></td>
+                                <td>" . $linhas["nome_turma"] . "</td>
+                                <td><a href='../Processos/excluir_turma.php'>Excluir</a></td>
                                 <td><a href='listar_atividades.php'>Visualizar</a></td>
                             </tr>
                         ";

@@ -1,6 +1,6 @@
 <?php
 
-include("conexao.php");
+include("../BancoDados/conexao.php");
 
 $professor = 1  /*$_SESSION["id_professor"]*/ ;
 $sql_consulta = $conn->prepare("SELECT * FROM Turma WHERE fk_professor = ?");
