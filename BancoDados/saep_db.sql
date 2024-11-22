@@ -25,7 +25,7 @@ CREATE TABLE Atividades(
 
 INSERT INTO Professor(nome_professor, email_professor, senha_professor) VALUES
 ('Hille', 'guilherme@gmail', '123'),
-('Higor', 'higor@gmail', '456'),
+('Roberto', 'roberto@gmail', '456'),
 ('Ludovico', 'ludovico@gmail', '789');
 
 INSERT INTO Turma(nome_turma, fk_professor) VALUES

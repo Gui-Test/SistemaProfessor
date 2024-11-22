@@ -1,5 +1,6 @@
 <?php include("../BancoDados/conexao.php");
-session_start()
+session_start();
+Auth();
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +22,7 @@ session_start()
     </nav>
 
     <div>
-        <a href="cadastrar.php">
+        <a href="cadastro_turma.php">
             <input type="button" value="Cadastrar Turma" name="cadastro_turma">
         </a>
     </div>
@@ -47,8 +48,16 @@ session_start()
                     echo "<tr>
                                 <td>" . $linhas["id_turma"] . "</td>
                                 <td>" . $linhas["nome_turma"] . "</td>
-                                <td><a href='../Processos/excluir_turma.php'>Excluir</a></td>
-                                <td><a href='listar_atividades.php'>Visualizar</a></td>
+                                <td> 
+                                    <form action='../Processos/excluir_turma.php' method='post'>
+                                    <button type='submit' name='turma_excluir' value='" . $linhas["id_turma"] . "'>Excluir</Button>
+                                    </form>
+                                </td>
+                                <td>
+                                    <form action='atividades_turma.php' method='post'>
+                                    <button type='submit' name='turma_listar' value='" . $linhas["id_turma"] . "'>Visualizar</Button>
+                                    </form>
+                                </td>
                             </tr>
                         ";
                 }
