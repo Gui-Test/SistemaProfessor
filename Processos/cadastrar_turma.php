@@ -1,8 +1,9 @@
 <?php
 
 include("../BancoDados/conexao.php");
-
+include("../BancoDados/auth.php");
 session_start();
+Auth();
 
 $nome_turma = $_POST["nome_turma"];
 $id_professor = $_POST["id_professor"];

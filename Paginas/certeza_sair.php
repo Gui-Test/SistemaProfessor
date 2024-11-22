@@ -1,5 +1,7 @@
 <?php include("../BancoDados/conexao.php");
+include("../BancoDados/auth.php");
 session_start();
+Auth();
 ?>
 
 <!DOCTYPE html>

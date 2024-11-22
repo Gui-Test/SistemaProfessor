@@ -1,5 +1,7 @@
 <?php include("../BancoDados/conexao.php");
-session_start()
+include("../BancoDados/auth.php");
+session_start();
+Auth();
 ?>
 
 <!DOCTYPE html>
@@ -12,6 +14,10 @@ session_start()
 </head>
 
 <body>
+
+        <a href="professor.php">
+            <button>Voltar</button>
+        </a>
     
     <form action="../Processos/cadastrar_turma.php" method="post">
 
