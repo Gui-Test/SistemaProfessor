@@ -27,7 +27,7 @@ Auth();
     </nav>
 
     <div>
-        <a href="cadastro_atividade.php">
+        <a href="cadastro_atividade.php?id_turma=<?php echo $_SESSION["id_turma"] ?>">
             <input type="button" value="Cadastrar atividade" name="cadastro_atividade">
         </a>
     </div>

@@ -1,6 +1,9 @@
 <?php 
 
-$id_turma = $_POST["turma_listar"];
+
+$_SESSION["id_turma"] = $_POST["turma_listar"];
+
+$id_turma = $_SESSION["id_turma"];
 $sql_consulta = $conn->prepare("SELECT * FROM Atividades WHERE fk_turma = ?");
 $sql_consulta->bind_param("i", $id_turma);
 

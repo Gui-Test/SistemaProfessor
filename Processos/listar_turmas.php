@@ -12,6 +12,7 @@ $resultado = $sql_consulta->get_result();
 
 if ($resultado->num_rows >= 1) {
     $lista_turmas = $resultado->fetch_all(MYSQLI_ASSOC);
+    
 } else {
     echo '<div> Não há turmas cadastradas </div>';
 }

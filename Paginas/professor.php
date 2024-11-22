@@ -1,7 +1,8 @@
 <?php include("../BancoDados/conexao.php");
 include("../BancoDados/auth.php");
 session_start();
-Auth()
+Auth();
+include("../Processos/listar_turmas.php");
 ?>
 
 <!DOCTYPE html>
@@ -41,8 +42,6 @@ Auth()
         <tbody>
 
             <?php
-
-            include("../Processos/listar_turmas.php");
 
             if (!empty($lista_turmas)) {
                 foreach ($lista_turmas as $linhas) {
